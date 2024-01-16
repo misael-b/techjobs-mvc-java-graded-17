@@ -52,6 +52,7 @@ public class ListController {
         if (column.equals("all")){
             jobs = JobData.findAll();
             model.addAttribute("All Jobs", "All Jobs");
+            model.addAttribute("title", "All Jobs");
         } else {
             jobs = JobData.findByColumnAndValue(column, value);
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
